@@ -71,7 +71,13 @@ body {
 
 #login input::placeholder {
     font-family: 'Overpass', sans-serif;
-    color: #E4E4E4;
+    
+    
+        color: #666; /* Cambia el color del texto del placeholder */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+        font-weight: bold; /* Hace que el texto del placeholder sea negrita */
+        opacity: 1; /* Asegura que el texto del placeholder sea completamente visible */
+    
 }
 
 #login button {

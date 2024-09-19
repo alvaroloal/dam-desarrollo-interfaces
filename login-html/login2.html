@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario login</title>
+
+    <meta name="author" content="Videojuegos & Desarrollo">
+    <meta name="description" content="Muestra de un formulario de acceso en HTML y CSS">
+    <meta name="keywords" content="Formulario Acceso, Formulario de LogIn">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+
+    <!-- link css -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <style type="text/css">
+        input::placeholder {
+            color: #666; 
+            font-size: 16px;
+            font-weight: 400; 
+            opacity: 1; 
+        }
+
+        #contenedor {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        #central {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #login .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        #loginform input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        #loginform button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        #loginform button:hover {
+            background-color: #2980b9;
+        }
+
+        .pie-form {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .pie-form a {
+            text-decoration: none;
+            color: #3498db;
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .pie-form a:hover {
+            color: #2980b9;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div id="central">
+            <div id="login">
+                <div class="titulo">
+                    Iniciar sesión
+                </div>
+                <form id="loginform">
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+                <div class="pie-form">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <a href="#">¿No tienes cuenta? Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
