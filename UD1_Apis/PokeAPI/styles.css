@@ -1,0 +1,98 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #bfc7d6;
+}
+
+.logo {
+    width: 150px;
+}
+
+.pokeball-icon {
+    width: 50px;
+}
+
+.pokemon-card {
+    display: none;
+}
+
+footer {
+    margin-top: 230px;
+}
+
+.footer-content {
+    text-align: center;
+    flex: 1;
+}
+
+.pokemon-name {
+    text-align: center; 
+    font-size: 24px; 
+    margin: 0; 
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+.type-box {
+    display: inline-block;
+    color: white; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.type-box.normal { background-color: #A8A878; }
+.type-box.fire { background-color: #F08030; }
+.type-box.water { background-color: #6890F0; }
+.type-box.grass { background-color: #78C850; }
+.type-box.electric { background-color: #F8D030; }
+.type-box.ice { background-color: #98D8D8; }
+.type-box.fighting { background-color: #C03028; }
+.type-box.poison { background-color: #A040B0; }
+.type-box.ground { background-color: #E0C068; }
+.type-box.flying { background-color: #A890F0; }
+.type-box.psychic { background-color: #F85888; }
+.type-box.bug { background-color: #A8B820; }
+.type-box.rock { background-color: #B8A038; }
+.type-box.ghost { background-color: #705898; }
+.type-box.dragon { background-color: #7038F8; }
+.type-box.dark { background-color: #705848; }
+.type-box.steel { background-color: #B8B8D0; }
+.type-box.fairy { background-color: #F0B6B6; }
+
+.row {
+    background-color: #EAE7E2;
+    width: 100%; 
+    height: auto;
+    min-height: 100px; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border-radius: 10px;
+}
+
+
+.navbar {
+    background-color: rgba(0, 123, 255, 0.9); 
+    padding: 15px 20px; 
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border-color: #f8f9fa;
+}
+
+.sticky-top {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
