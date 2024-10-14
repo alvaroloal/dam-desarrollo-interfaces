@@ -1,0 +1,11 @@
+<h1>Galería de Coches</h1>
+<div class="row">
+  <div class="col" *ngFor="let car of cars">
+    <app-car 
+      [carModel]="car.model" 
+      [carYear]="car.year" 
+      [carPrice]="car.price" 
+      [carImage]="car.image">
+    </app-car>
+  </div>
+</div>
