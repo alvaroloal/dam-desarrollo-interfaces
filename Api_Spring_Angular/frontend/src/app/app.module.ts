@@ -4,6 +4,7 @@ import { BookListComponent } from "./book-list/book-list.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app.routes";
 import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { HttpClientModule } from "@angular/common/http";
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterModule
     ],
     providers: [],
     bootstrap: [AppComponent]
