@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './car.component.css',
 })
 export class CarComponent {
-  name = 'Tesla Model X';
-  automatic = false;
+  nombre = 'Tesla Model X';
+  automatico = false;
   manual = true;
   imgSrc =
     'https://content.r9cdn.net/rimg/car-images/generic/05_suv-small_white.png?height=232';
-  price = 298;
+  precio = 350;
 }
