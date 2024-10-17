@@ -1,5 +1,5 @@
 {
-  "name": "tabla-estudiantes",
+  "name": "paises-prefijos-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,17 +11,17 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
-    "@angular/cdk": "^18.2.8",
     "@angular/common": "^18.2.0",
     "@angular/compiler": "^18.2.0",
     "@angular/core": "^18.2.0",
     "@angular/forms": "^18.2.0",
-    "@angular/material": "^18.2.8",
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "bootstrap": "^5.3.3",
+    "flag-icon-css": "^3.3.0",
+    "paises-prefijos-app": "file:",
     "rxjs": "~7.8.0",
-    "tabla-estudiantes": "file:",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },

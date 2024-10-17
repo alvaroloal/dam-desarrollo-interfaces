@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2>Lista de países y prefijos telefónicos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th>País</th>
+          <th>Prefijo Telefónico</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pais of paises">
+          <td>
+            <span class="flag-icon flag-icon-{{pais.codigo}}"></span>
+          </td>
+          <td>{{pais.nombre}}</td>
+          <td>{{pais.prefijo}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
