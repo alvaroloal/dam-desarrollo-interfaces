@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <div class="form-group">
+    <label for="progressValue">Valor:</label>
+    <input type="number" 
+            id="progressValue" 
+            class="form-control" 
+            [(ngModel)]="progressBarValue" 
+            (input)="onValueChange(progressBarValue)" 
+            min="0" 
+            max="100">
+  </div>
+
+  <div class="form-group">
+    <label for="progressColor">Color:</label>
+    <select id="progressColor" class="form-control" [(ngModel)]="progressBarColor" (change)="onColorChange(progressBarColor)">
+      <option value="bg-primary">Azul</option>
+      <option value="bg-success">Verde</option>
+      <option value="bg-danger">Rojo</option>
+      <option value="bg-warning">Amarillo</option>
+    </select>
+  </div><br><br>
+
+  <app-custom-progress-bar [value]="progressBarValue" [color]="progressBarColor"></app-custom-progress-bar>
+</div>
