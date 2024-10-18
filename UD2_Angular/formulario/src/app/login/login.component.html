@@ -1,0 +1,30 @@
+<div class="container">
+
+    <mat-toolbar color="primary">
+      <span>Formulario login</span>
+    </mat-toolbar>
+  
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4">
+        <div class="login-card">
+          <h2 class="text-center">Inicio de sesión</h2>
+          <form>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" placeholder="Introduce tu email" [(ngModel)]="email" name="email">
+            </mat-form-field>
+  
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Contraseña</mat-label>
+              <input matInput type="password" placeholder="Introduce tu contraseña" [(ngModel)]="password" name="password">
+            </mat-form-field>
+  
+            <button mat-raised-button color="accent" class="full-width login-button" (click)="onLogin()">
+              Iniciar Sesión
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
