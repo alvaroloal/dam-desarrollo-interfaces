@@ -1,4 +1,4 @@
-export interface Vehicle {
+export interface VehicleListResponse {
     cargo_capacity: string;
     consumables: string;
     cost_in_credits: string;
