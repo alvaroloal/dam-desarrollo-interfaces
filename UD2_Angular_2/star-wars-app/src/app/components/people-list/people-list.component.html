@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Star Wars Characters</h2>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let person of people">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">{{ person.name }}</h5>
+            <p class="card-text">
+              <strong>Altura:</strong> {{ person.height }}<br>
+              <strong>Peso:</strong> {{ person.mass }}<br>
+              <strong>Color de pelo:</strong> {{ person.hair_color }}<br>
+              <strong>Color de ojos:</strong> {{ person.eye_color }}<br>
+              <strong>Año nacimiento:</strong> {{ person.birth_year }}<br>
+              <strong>Género:</strong> {{ person.gender }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
