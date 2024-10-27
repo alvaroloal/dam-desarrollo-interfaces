@@ -21,6 +21,8 @@
     "myapp": "file:",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "webpack-dev-middleware": "^7.4.2",
+    "webpack-dev-server": "^5.1.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
