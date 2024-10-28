@@ -1,0 +1,22 @@
+<div class="card text-center">
+  <img [src]="pokemon.image" class="card-img-top" alt="{{ pokemon.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon.name }}</h5>
+
+  
+    <div class="progress mb-3">
+      <div class="progress-bar" role="progressbar" [style.width.%]="pokemon.health" [class.bg-danger]="pokemon.health < 30">
+        {{ pokemon.health }}
+      </div>
+    </div>
+
+  
+    <div *ngFor="let attack of attacks">
+      <button (click)="performAttack(attack.damage)" class="btn btn-primary m-1">
+        {{ attack.name }} ({{ attack.damage }})
+      </button>
+    </div>
+  </div>
+</div>
+
+

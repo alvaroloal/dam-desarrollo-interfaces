@@ -1,0 +1,30 @@
+<div class="row text-center">
+  <div class="col">
+    <app-pokemon [pokemon]="pokemon1" (attack)="onAttack(1, $event)"></app-pokemon>
+  </div>
+  <div class="col">
+    <app-pokemon [pokemon]="pokemon2" (attack)="onAttack(2, $event)"></app-pokemon>
+  </div>
+</div>
+
+<div *ngIf="winner" class="alert alert-success mt-4">
+  ¡{{ winner }} ha ganado la batalla!
+</div>
+
+<div class="text-center mt-4">
+  <button class="btn btn-secondary" (click)="resetBattle()">Reset batalla</button>
+</div>
+
+
+<div>
+  <h2>{{ pokemon1.name }}</h2>
+  <img [src]="pokemon1.image" alt="{{ pokemon1.name }}" width="150">
+  <p>Health: {{ pokemon1.health }}</p>
+</div>
+
+<div>
+  <h2>{{ pokemon2.name }}</h2>
+  <img [src]="pokemon2.image" alt="{{ pokemon2.name }}" width="150">
+  <p>Health: {{ pokemon2.health }}</p>
+</div>
+
