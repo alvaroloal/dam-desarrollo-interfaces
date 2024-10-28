@@ -1,0 +1,82 @@
+<div class="container mt-5">
+  <div class="text-center mb-5">
+    <h2 class="display-4 text-primary font-weight-bold">⚔️ Batalla ⚔️</h2>
+    <p class="lead text-muted">Selecciona Pokémons y empieza la batalla</p>
+  </div>
+
+  <div *ngIf="!pokemon1 || !pokemon2" class="alert alert-secondary text-center">
+    Selecciona dos Pokémon para empezar.
+  </div>
+
+  <div class="container-sm" style="max-width: 600px;">
+    <div class="row mb-4">
+      <div class="col-md-5">
+        <label for="pokemon1-select" class="form-label">Primer Pokémon</label>
+        <select id="pokemon1-select" class="form-select form-select-sm" (change)="onPokemonSelect(1, $event)">
+          <option value="" selected disabled >Selecciona un Pokémon</option>
+          <option *ngFor="let pokemon of pokemonList" [value]="pokemon.id">{{ pokemon.name }}</option>
+        </select>
+      </div>
+  
+      <div class="col-md-5">
+        <label for="pokemon2-select" class="form-label">Segundo Pokémon</label>
+        <select id="pokemon2-select" class="form-select form-select-sm" (change)="onPokemonSelect(2, $event)">
+          <option value="" selected disabled>Selecciona un Pokémon</option>
+          <option *ngFor="let pokemon of pokemonList" [value]="pokemon.id">{{ pokemon.name }}</option>
+        </select>
+      </div>
+  
+      <div class="col-md-2 d-flex align-items-end">
+        <button class="btn btn-outline-danger btn-sm w-180" (click)="resetBattle()">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="row justify-content-between mt-5" *ngIf="pokemon1 && pokemon2">
+    <div class="col-md-5 text-center p-3 bg-light rounded shadow-lg">
+      <app-pokemon
+        [pokemon]="pokemon1"
+        [canAttack]="turn === 1 && !winner"
+        (attack)="onAttack(1)">
+      </app-pokemon>
+ 
+      <div class="progress mt-3 rounded-pill" style="height: 1.5rem;">
+        <div
+          class="progress-bar bg-success text-white font-weight-bold"
+          role="progressbar"
+          [style.width.%]="(pokemon1Hp / maxHp1) * 100">
+          Vida: {{ pokemon1Hp }}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-2 d-flex align-items-center justify-content-center">
+      <h2 class="display-4 font-weight-bold text-secondary">VS</h2>
+    </div>
+
+    <div class="col-md-5 text-center p-3 bg-light rounded shadow-lg">
+      <app-pokemon
+        [pokemon]="pokemon2"
+        [canAttack]="turn === 2 && !winner"
+        (attack)="onAttack(2)">
+      </app-pokemon>
+
+      <div class="progress mt-3 rounded-pill" style="height: 1.5rem;">
+        <div
+          class="progress-bar bg-danger text-white font-weight-bold"
+          role="progressbar"
+          [style.width.%]="(pokemon2Hp / maxHp2) * 100">
+          Vida: {{ pokemon2Hp }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div *ngIf="winner" class="alert alert-success text-center mt-3">
+    <h5 class="font-weight-bold small">¡{{ winner }} ha ganado la batalla!</h5>
+  </div>
+
+</div>

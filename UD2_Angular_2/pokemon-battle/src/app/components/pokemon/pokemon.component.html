@@ -1,0 +1,8 @@
+<div class="card border-primary text-center" *ngIf="pokemon">
+  <img [src]="pokemon.sprites.front_default" class="card-img-top p-3" alt="{{ pokemon.name }}" />
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon.name | uppercase }}</h5>
+    <p class="card-text"><strong>Vida inicial:</strong> {{ pokemon.stats[0].base_stat }}</p>
+    <button class="btn btn-primary" (click)="onAttack()" [disabled]="!canAttack">Ataque</button>
+  </div>
+</div>
