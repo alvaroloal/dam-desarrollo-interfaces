@@ -1,9 +1,0 @@
-<div class="card text-center">
-    <img [src]="'https://img.pokemondb.net/sprites/home/normal/' + pokemon.name + '.png'" class="card-img-top" alt="{{ pokemon.name }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ pokemon.name | titlecase }}</h5>
-      <p class="card-text">Health: {{ health }}</p>
-      <button class="btn btn-danger" [disabled]="!isTurn" (click)="onAttack()">Attack</button>
-    </div>
-  </div>
-  
