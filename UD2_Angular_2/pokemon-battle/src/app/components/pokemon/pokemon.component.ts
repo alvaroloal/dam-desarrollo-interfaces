@@ -11,6 +11,8 @@ export class PokemonComponent {
   @Input() canAttack: boolean = false;
   @Output() attack = new EventEmitter<void>();
 
+
+  //metodo para lo que puede hacer el pokemon
   onAttack() {
     if (this.canAttack) {
       this.attack.emit();
