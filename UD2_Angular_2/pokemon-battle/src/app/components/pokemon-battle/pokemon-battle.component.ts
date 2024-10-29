@@ -24,7 +24,7 @@ export class PokemonBattleComponent implements OnInit {
   ngOnInit() {
     this.loadPokemonList();
   }
-
+  //lista pokemons para elegir
   loadPokemonList() {
     for (let i = 1; i <= 30; i++) {
       this.pokemonService.getPokemon(i).subscribe(pokemon => {
@@ -32,7 +32,7 @@ export class PokemonBattleComponent implements OnInit {
       });
     }
   }
-
+  //cada pokemon elegido se asigna a un jugador de la batalla
   onPokemonSelect(pokemonSlot: number, event: Event) {
     const selectedId = +(event.target as HTMLSelectElement).value;
     if (pokemonSlot === 1) {
@@ -68,7 +68,7 @@ export class PokemonBattleComponent implements OnInit {
       this.winner = this.pokemon1?.name || 'Jugador 1';
     }
   }
-
+  //para reiniciar la batalla
   resetBattle() {
     this.pokemon1 = null;
     this.pokemon2 = null;
