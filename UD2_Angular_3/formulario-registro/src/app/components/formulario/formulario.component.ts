@@ -37,7 +37,7 @@ export class FormularioComponent {
     }
 
     console.log('Información del usuario:', this.usuario);
-    alert('Registro exitoso');
+    alert('Registrado con éxito');
   }
 }
 
