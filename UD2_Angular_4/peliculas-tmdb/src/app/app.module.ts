@@ -7,17 +7,21 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { RouterModule } from '@angular/router';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PopularMoviesComponent
+    PopularMoviesComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   providers: [
     provideAnimationsAsync()
