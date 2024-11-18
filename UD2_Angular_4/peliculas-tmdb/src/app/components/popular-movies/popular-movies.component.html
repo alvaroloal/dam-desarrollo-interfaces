@@ -8,12 +8,12 @@
         <div class="movie-header">
           <h3 class="movie-title">{{ movie.title }}</h3>
           <div class="spinner-container">
-           <!-- <mat-progress-spinner
+           <mat-progress-spinner
               class="movie-spinner"
               [mode]="'determinate'"
               diameter="50"
               [value]="movie.vote_average * 10">
-            </mat-progress-spinner>-->
+            </mat-progress-spinner>
             <span class="spinner-text">{{ (movie.vote_average * 10) | number:'1.0-0' }}%</span>
           </div>
         </div>
