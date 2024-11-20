@@ -1,8 +1,0 @@
-<div *ngIf="movieDetails">
-    <h2>{{ movieDetails.title }}</h2>
-    <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="{{ movieDetails.title }}" />
-    <p>{{ movieDetails.overview }}</p>
-    <p><strong>Fecha de lanzamiento:</strong> {{ movieDetails.release_date }}</p>
-    <p><strong>Duración:</strong> {{ movieDetails.runtime }} minutos</p>
-  </div>
-  
